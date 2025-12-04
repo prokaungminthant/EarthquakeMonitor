@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QuakeSense Lite — Web</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2b2f4a">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body data-mode="web">
+  <header class="topbar">
+    <h1>QuakeSense Lite</h1>
+    <div class="header-right">
+      <button id="refreshBtn" title="Refresh now"> Refresh</button>
+      <button id="installBtn" style="display:none;">⬇️ Install</button>
+    </div>
+  </header>
+
+  <div id="alertArea" class="alert-area" aria-live="polite"></div>
+
+  <main class="container">
+    <section class="map-area">
+      <div id="map"></div>
+    </section>
+
+    <section class="list-area">
+      <div class="controls">
+        <label>Min magnitude:
+          <select id="minMag">
+            <option value="0">0.0</option>
+            <option value="2">2.0</option>
+            <option value="3">3.0</option>
+            <option value="4">4.0</option>
+            <option value="5">5.0</option>
+          </select>
+        </label>
+        <label>Feed:
+          <select id="feedSelect">
+            <option value="all_hour">All (last hour)</option>
+            <option value="all_day">All (last 24h)</option>
+            <option value="4.5_day">≥4.5 (24h)</option>
+            <option value="significant_day">Significant (24h)</option>
+          </select>
+        </label>
+      </div>
+
+      <h2>Recent Earthquakes</h2>
+      <ul id="quakeList" class="quake-list"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Data source: <a href="https://earthquake.usgs.gov/" target="_blank" rel="noopener">USGS Earthquake Feeds</a>
+    • This demo is free to use for education.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

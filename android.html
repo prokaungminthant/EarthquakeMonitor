@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QuakeSense Lite — Android</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2b2f4a">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body data-mode="android">
+  <header class="topbar">
+    <h1>QuakeSense Lite (Android)</h1>
+    <div class="header-right">
+      <button id="refreshBtn" title="Refresh now"></button>
+    </div>
+  </header>
+
+  <div id="alertArea" class="alert-area" aria-live="polite"></div>
+
+  <main class="container">
+    <section class="controls-area">
+      <label for="citySelector">Choose your city:</label>
+      <select id="citySelector"></select>
+      <button id="setCity">Set City</button>
+      <label for="radiusInput">Alert radius (km):</label>
+      <input id="radiusInput" type="number" value="300" min="10" max="2000" step="10" />
+    </section>
+
+    <section class="map-area">
+      <div id="map"></div>
+    </section>
+
+    <section class="list-area">
+      <h2>Recent Earthquakes</h2>
+      <ul id="quakeList" class="quake-list"></ul>
+    </section>
+  </main>
+  <main>
+
+  </main>
+  <footer class="footer">
+    Data: <a href="https://earthquake.usgs.gov/" target="_blank" rel="noopener">USGS</a> • You may install as PWA or wrap with Capacitor.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

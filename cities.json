@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Yangon",
+    "country": "Myanmar",
+    "lat": 16.8409,
+    "lon": 96.1735
+  },
+  {
+    "name": "Tokyo",
+    "country": "Japan",
+    "lat": 35.6895,
+    "lon": 139.6917
+  },
+  {
+    "name": "Los Angeles",
+    "country": "USA",
+    "lat": 34.0522,
+    "lon": -118.2437
+  },
+  {
+    "name": "Jakarta",
+    "country": "Indonesia",
+    "lat": -6.2088,
+    "lon": 106.8456
+  },
+  {
+    "name": "Santiago",
+    "country": "Chile",
+    "lat": -33.4489,
+    "lon": -70.6693
+  },
+  {
+    "name": "Wellington",
+    "country": "New Zealand",
+    "lat": -41.2865,
+    "lon": 174.7762
+  },
+  {
+    "name": "Istanbul",
+    "country": "Turkey",
+    "lat": 41.0082,
+    "lon": 28.9784
+  },
+  {
+    "name": "Kathmandu",
+    "country": "Nepal",
+    "lat": 27.7172,
+    "lon": 85.324
+  },
+  {
+    "name": "San Francisco",
+    "country": "USA",
+    "lat": 37.7749,
+    "lon": -122.4194
+  },
+  {
+    "name": "Mexico City",
+    "country": "Mexico",
+    "lat": 19.4326,
+    "lon": -99.1332
+  }
+]
