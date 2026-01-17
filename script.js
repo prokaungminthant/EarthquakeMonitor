@@ -23,14 +23,22 @@ function haversine(lat1, lon1, lat2, lon2){
 }
 
 // init map
-function initMap(){
-  map = L.map('map', {zoomControl:true}).setView([10,0], 2);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors',
-    maxZoom: 18,
-  }).addTo(map);
+function initMap() {
+  map = L.map('map', { zoomControl: true }).setView([10, 0], 2);
+
+  // Dark mode map (CartoDB Dark Matter)
+  L.tileLayer(
+    'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+    {
+      attribution: '© OpenStreetMap contributors © CARTO',
+      subdomains: 'abcd',
+      maxZoom: 19,
+    }
+  ).addTo(map);
+
   markersLayer = L.layerGroup().addTo(map);
 }
+
 
 // load cities into selector (android mode)
 async function loadCities(){
